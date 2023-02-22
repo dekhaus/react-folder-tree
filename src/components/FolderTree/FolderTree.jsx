@@ -30,6 +30,10 @@ const FolderTree = ({
 
   const [selectedId, setSelectedId] = useState(null)
 
+  useEffect(() => {
+    console.log('DSE:: FolderTree.selectedId', selectedId)
+  }, [selectedId])
+
   const { treeState, reducers } = useTreeState({ data, options, onChange });
   const {
     checkNode,
@@ -55,11 +59,6 @@ const FolderTree = ({
     readOnly,
   };
 
-  useEffect(() => {
-    if (selectedId) {
-      console.log('DSE:: FolderTree.selectedId', selectedId)
-    }
-  }, [selectedId])
 
   /* ----------
     - custom configs are passed down in context, which is same for each tree node
