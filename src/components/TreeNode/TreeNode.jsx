@@ -37,8 +37,11 @@ const TreeNode = ({
   ...restData
 }) => {
   const nodeData = {
-    path, name, checked, isOpen, selectedId, setSelectedId, ...restData,
+    path, name, checked, isOpen, ...restData,
   };
+
+  console.log('DSE::TreeNode.selectedId', selectedId)
+  console.log('DSE::TreeNode.setSelectedId', setSelectedId)
 
   const {
     handleCheck,
