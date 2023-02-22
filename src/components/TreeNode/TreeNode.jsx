@@ -119,6 +119,8 @@ const TreeNode = ({
     console.log('DSE::handleNameClick.nodeData', nodeData)
     console.log('DSE::handleNameClick.nodeData._id', nodeData._id)
 
+    setSelectedId(nodeData._id)
+
     const defaultOnClick = selectMe;
     if (onNameClick && typeof onNameClick === 'function') {
       !isEditing && onNameClick({ defaultOnClick, nodeData });
