@@ -113,6 +113,7 @@ const TreeNode = ({
   const addFolder = () => handleAddNode(path, true);
 
   const handleNameClick = () => {
+    console.log('DSE::handleNameClick')
     const defaultOnClick = selectMe;
     if (onNameClick && typeof onNameClick === 'function') {
       !isEditing && onNameClick({ defaultOnClick, nodeData });
