@@ -48,8 +48,8 @@
     "start": "NODE_ENV=development node scripts/dev-server.js",
     "lint": "eslint src/ --ext .js,.jsx",
     "test": "jest --collect-coverage",
-    "prepublish": "yarn build"
-    "precommit": ["build"],
+    "prepublish": "yarn build",
+    "precommit": ["build"]
   },
   "husky": {
     "hooks": {
