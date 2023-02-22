@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useTreeState, {
   testData,
@@ -54,6 +54,10 @@ const FolderTree = ({
     showCheckbox,
     readOnly,
   };
+
+  useEffect(() => {
+    console.log('DSE:: FolderTree.selectedId', selectedId)
+  }, [selectedId])
 
   /* ----------
     - custom configs are passed down in context, which is same for each tree node
