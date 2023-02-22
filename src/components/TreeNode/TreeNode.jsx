@@ -40,9 +40,6 @@ const TreeNode = ({
     path, name, checked, isOpen, ...restData,
   };
 
-  console.log('DSE :: TreeNode.selectedId', selectedId)
-  console.log('DSE :: TreeNode.setSelectedId', setSelectedId)
-
   const {
     handleCheck,
     handleRename,
@@ -119,7 +116,7 @@ const TreeNode = ({
 
   const handleNameClick = (event) => {
     console.log('DSE :: handleNameClick.event', event)
-    console.log('DSE :: handleNameClick.nodeData', nodeData)
+    console.log('DSE :: handleNameClick.event.target', event.target)
     console.log('DSE :: handleNameClick.nodeData._id', nodeData._id)
 
     setSelectedId(nodeData._id)
