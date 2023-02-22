@@ -211,7 +211,7 @@ const TreeNode = ({
         </span>
 
         <span
-          className={ iconContainerClassName('editableNameContainer') }
+          className={ iconContainerClassName('editableNameContainer') + ' fubar' }
           onClick={ handleNameClick }
         >
           <EditableName
