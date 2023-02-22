@@ -211,7 +211,7 @@ const TreeNode = ({
         </span>
 
         <span
-          className={ iconContainerClassName('editableNameContainer') + `${ nodeData._id === selectedId ? 'fubar' : '' }` }
+          className={ iconContainerClassName('editableNameContainer') + `${ nodeData._id === selectedId ? ' react-folder-tree-selected' : '' }` }
           onClick={ handleNameClick }
         >
           <EditableName
