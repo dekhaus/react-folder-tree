@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useTreeState, {
   testData,
@@ -27,6 +27,9 @@ const FolderTree = ({
     initCheckedStatus,
     initOpenStatus,
   };
+
+  const [selectedId, setSelectedId] = useState(null)
+
   const { treeState, reducers } = useTreeState({ data, options, onChange });
   const {
     checkNode,
@@ -62,6 +65,8 @@ const FolderTree = ({
         value={ configs }
       >
         <TreeNode
+          selectedId={ selectedId }
+          setSelectedId={ setSelectedId }
           key={ treeState._id }
           path={ [] }
           { ...treeState }

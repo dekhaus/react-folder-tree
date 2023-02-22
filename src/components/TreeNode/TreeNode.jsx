@@ -31,11 +31,13 @@ const TreeNode = ({
   name,
   checked,
   isOpen,
+  selectedId,
+  setSelectedId,
   children,
   ...restData
 }) => {
   const nodeData = {
-    path, name, checked, isOpen, ...restData,
+    path, name, checked, isOpen, selectedId, setSelectedId, ...restData,
   };
 
   const {
