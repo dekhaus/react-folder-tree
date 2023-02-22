@@ -49,7 +49,9 @@
     "lint": "eslint src/ --ext .js,.jsx",
     "test": "jest --collect-coverage",
     "prepublish": "yarn build",
-    "precommit": ["build"]
+    "precommit": [
+      "build"
+    ]
   },
   "husky": {
     "hooks": {
