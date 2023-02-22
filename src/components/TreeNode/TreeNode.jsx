@@ -40,8 +40,8 @@ const TreeNode = ({
     path, name, checked, isOpen, ...restData,
   };
 
-  console.log('DSE::TreeNode.selectedId', selectedId)
-  console.log('DSE::TreeNode.setSelectedId', setSelectedId)
+  console.log('DSE :: TreeNode.selectedId', selectedId)
+  console.log('DSE :: TreeNode.setSelectedId', setSelectedId)
 
   const {
     handleCheck,
@@ -118,9 +118,9 @@ const TreeNode = ({
   const addFolder = () => handleAddNode(path, true);
 
   const handleNameClick = (event) => {
-    console.log('DSE::handleNameClick.event', event)
-    console.log('DSE::handleNameClick.nodeData', nodeData)
-    console.log('DSE::handleNameClick.nodeData._id', nodeData._id)
+    console.log('DSE :: handleNameClick.event', event)
+    console.log('DSE :: handleNameClick.nodeData', nodeData)
+    console.log('DSE :: handleNameClick.nodeData._id', nodeData._id)
 
     setSelectedId(nodeData._id)
 
@@ -233,6 +233,8 @@ const TreeNode = ({
       {
         isFolder && isOpen && children.map((data, idx) => (
           <TreeNode
+            selectedId={ selectedId }
+            setSelectedId={ setSelectedId }
             key={ data._id }
             path={ [...path, idx] }
             { ...data }
