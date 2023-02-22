@@ -56,7 +56,9 @@ const FolderTree = ({
   };
 
   useEffect(() => {
-    console.log('DSE:: FolderTree.selectedId', selectedId)
+    if (selectedId) {
+      console.log('DSE:: FolderTree.selectedId', selectedId)
+    }
   }, [selectedId])
 
   /* ----------
