@@ -14,6 +14,8 @@ import './FolderTree.scss';
 
 const FolderTree = ({
   data,
+  selectedId,
+  setSelectedId,
   onChange = console.log,   // eslint-disable-line
   initCheckedStatus = 'unchecked',
   initOpenStatus = 'open',
@@ -27,8 +29,6 @@ const FolderTree = ({
     initCheckedStatus,
     initOpenStatus,
   };
-
-  const [selectedId, setSelectedId] = useState(null)
 
   // useEffect(() => {
   //   console.log('DSE :: FolderTree.selectedId', selectedId)
