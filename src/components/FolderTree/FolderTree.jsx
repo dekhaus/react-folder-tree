@@ -30,9 +30,9 @@ const FolderTree = ({
 
   const [selectedId, setSelectedId] = useState(null)
 
-  useEffect(() => {
-    console.log('DSE :: FolderTree.selectedId', selectedId)
-  }, [selectedId])
+  // useEffect(() => {
+  //   console.log('DSE :: FolderTree.selectedId', selectedId)
+  // }, [selectedId])
 
   const { treeState, reducers } = useTreeState({ data, options, onChange });
   const {
