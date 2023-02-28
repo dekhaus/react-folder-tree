@@ -115,9 +115,9 @@ const TreeNode = ({
   const addFolder = () => handleAddNode(path, true);
 
   const handleNameClick = (event) => {
-    console.log('DSE :: handleNameClick.event', event)
-    console.log('DSE :: handleNameClick.event.target', event.target)
-    console.log('DSE :: handleNameClick.nodeData', nodeData)
+    // console.log('DSE :: handleNameClick.event', event)
+    // console.log('DSE :: handleNameClick.event.target', event.target)
+    // console.log('DSE :: handleNameClick.nodeData', nodeData)
 
     setSelectedId(nodeData.name)
 
