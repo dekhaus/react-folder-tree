@@ -119,7 +119,7 @@ const TreeNode = ({
     console.log('DSE :: handleNameClick.event.target', event.target)
     console.log('DSE :: handleNameClick.nodeData', nodeData)
 
-    setSelectedId(nodeData._id)
+    setSelectedId(nodeData.name)
 
     const defaultOnClick = selectMe;
     if (onNameClick && typeof onNameClick === 'function') {
@@ -211,7 +211,7 @@ const TreeNode = ({
         </span>
 
         <span
-          className={ iconContainerClassName('editableNameContainer') + `${ nodeData._id === selectedId ? ' react-folder-tree-selected' : '' }` }
+          className={ iconContainerClassName('editableNameContainer') + `${ nodeData.name === selectedId ? ' react-folder-tree-selected' : '' }` }
           onClick={ handleNameClick }
         >
           <EditableName
