@@ -206,36 +206,11 @@ const TreeNode = ({
         { isFolder && folderCaret }
 
         <span className={ iconContainerClassName('typeIconContainer') }>
-          {
-            !isFolder &&
-            <FileIcon
-              color={ 'green' }
-              className={ iconClassName(FileIcon) }
-              onClick={ selectMe }
-              nodeData={ nodeData }
-            />
-          }
-
-          {
-            isFolder && isOpen &&
-            <FolderOpenIcon
-              color={ 'green' }
-              className={ iconClassName(FolderOpenIcon) }
-              onClick={ selectMe }
-              nodeData={ nodeData }
-            />
-          }
-
-          {
-            isFolder && !isOpen &&
-            <FolderIcon
-              color={ 'green' }
-              className={ iconClassName(FolderIcon) }
-              onClick={ selectMe }
-              nodeData={ nodeData }
-            />
-          }
-
+          <TypeIcon
+            className={ iconClassName(TypeIconType) }
+            onClick={ selectMe }
+            nodeData={ nodeData }
+          />
         </span>
 
         <span
