@@ -170,7 +170,7 @@ const TreeNode = ({
 
   const folderCaret = (
     <span
-      className={ iconContainerClassName('caretContainer') }
+      className={ iconContainerClassName('caretContainer') + `${ isDark ? ' react-folder-tree-icon-dark' : ' react-folder-tree-icon-light' }` }
     >
       {
         isOpen
