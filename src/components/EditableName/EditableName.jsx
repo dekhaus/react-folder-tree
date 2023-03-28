@@ -10,6 +10,7 @@ import {
 
 const EditableName = ({
   isEditing,
+  isDark,
   setIsEditing,
   onNameChange,
   OKIcon,
