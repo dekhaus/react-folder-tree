@@ -11,6 +11,7 @@ import {
 const EditableName = ({
   isEditing,
   isDark,
+  isHighlighted,
   setIsEditing,
   onNameChange,
   OKIcon,
@@ -54,7 +55,11 @@ const EditableName = ({
     </span>
   );
 
-  const klassNames = 'displayName ' + `${ isDark ? ' react-folder-tree-text-dark' : ' react-folder-tree-text-light' }`
+  let klassNames = 'displayName'
+  if (!isHighlighted) {
+    klassNames = 'displayName ' + `${ isDark ? ' react-folder-tree-text-dark' : ' react-folder-tree-text-light' }`
+  }
+
   const displayName = (
     <span className={ klassNames }>
       { name }

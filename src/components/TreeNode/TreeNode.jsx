@@ -192,6 +192,7 @@ const TreeNode = ({
     </span>
   );
 
+  const isHighlighted = nodeData.name === selectedId
   return (
     <>
       <div className='TreeNode' style={ treeNodeStyle }>
@@ -214,7 +215,7 @@ const TreeNode = ({
         </span>
 
         <span
-          className={ iconContainerClassName('editableNameContainer') + `${ nodeData.name === selectedId ? ' react-folder-tree-selected' : '' }` }
+          className={ iconContainerClassName('editableNameContainer') + `${ isHighlighted ? ' react-folder-tree-selected' : '' }` }
           onClick={ handleNameClick }
         >
           <EditableName
@@ -225,6 +226,7 @@ const TreeNode = ({
             CancelIcon={ CancelIcon }
             nodeData={ nodeData }
             isDark={ isDark }
+            isHighlighted={ isHighlighted }
           />
         </span>
         { isSelected && TreeNodeToolBar }
