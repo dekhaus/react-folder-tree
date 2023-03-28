@@ -206,6 +206,7 @@ const TreeNode = ({
 
         <span className={ iconContainerClassName('typeIconContainer') }>
           <TypeIcon
+            color={ 'green' }
             className={ iconClassName(TypeIconType) }
             onClick={ selectMe }
             nodeData={ nodeData }
