@@ -7,6 +7,8 @@ import useTreeState, {
   findTargetPathByProp,
 } from 'use-tree-state';
 
+import light, { dark } from '@tidbits/react-tidbits/theme'
+
 import TreeNode from '../TreeNode/TreeNode';
 import ConfigContext from './context';
 
