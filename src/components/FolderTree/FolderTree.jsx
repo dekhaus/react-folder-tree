@@ -16,6 +16,7 @@ import './FolderTree.scss';
 
 const FolderTree = ({
   data,
+  isDark,
   selectedId,
   setSelectedId,
   onChange = console.log,   // eslint-disable-line
@@ -91,6 +92,7 @@ const FolderTree = ({
         value={ configs }
       >
         <TreeNode
+          isDark={ isDark }
           selectedId={ selectedId }
           setSelectedId={ setSelectedId }
           key={ treeState._id }
