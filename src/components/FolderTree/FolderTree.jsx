@@ -63,25 +63,6 @@ const FolderTree = ({
   };
 
 
-  const [theme, setTheme] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches ? dark : light)
-
-  useEffect(() => {
-    const handleMatchMediaChange = event => {
-      if (event.matches) {
-        setTheme(dark)
-      } else {
-        setTheme(light)
-      }
-    }
-
-    const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
-    matchMedia.addEventListener('change', handleMatchMediaChange)
-
-    return () => {
-      matchMedia.removeEventListener('change', handleMatchMediaChange)
-    }
-  }, [])
-
     /* ----------
     - custom configs are passed down in context, which is same for each tree node
     - tree node specific data is passed recursively to each node, which is different for each node
