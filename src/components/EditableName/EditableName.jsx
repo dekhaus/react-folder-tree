@@ -54,7 +54,7 @@ const EditableName = ({
   );
 
   const displayName = (
-    <span className='displayName'>
+    <span className={ `displayName ${ isDark ? ' react-folder-tree-text-dark' : ' react-folder-tree-text-light'}` }>
       { name }
     </span>
   );
