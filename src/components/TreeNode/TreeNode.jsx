@@ -205,7 +205,7 @@ const TreeNode = ({
 
         { isFolder && folderCaret }
 
-        <span className={ iconContainerClassName('typeIconContainer') + `${ isDark ? ' react-folder-tree-text-icon-dark' : ' react-folder-tree-text-icon-light' }`}>
+        <span className={ iconContainerClassName('typeIconContainer') + `${ isDark ? ' react-folder-tree-icon-dark' : ' react-folder-tree-icon-light' }`}>
           <TypeIcon
             className={ iconClassName(TypeIconType) }
             onClick={ selectMe }
